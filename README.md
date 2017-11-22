@@ -2,7 +2,7 @@
 Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experiments)
 
 ## Pulse Timing
-![Alt text](PulseGen desc.jpg?raw=true)
+![Alt text](PulseGen_desc.jpg?raw=true)
 
 
 ### Usage
