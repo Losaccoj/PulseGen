@@ -4,7 +4,7 @@ Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experim
 ## Pulse Timing
 #+CAPTION: Pulse timings (stimulus parameters) established by user in "user_params"
 #+ATTR_HTML: :width 50% :height 50%
-[[file:img/PulseGen_desc.tif]]
+[[file:PulseGen_desc.tif]]
 
 ### Usage
 1. Upon boot (after splash screen (splash)), user must input stimulus parameters (user_params) on keypad following prompts. 
