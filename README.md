@@ -1,11 +1,11 @@
 # PulseGen
 Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experiments)
 
-<img src="https://github.com/Losaccoj/PulseGen/blob/master/PulseGen_face.jpg" width="426" height="385"> 
-<img src="https://github.com/Losaccoj/PulseGen/blob/master/PulseGen_connections.jpg" width="426" height="200">
+<img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/PulseGen_face.jpg" width="426" height="385"> 
+<img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/PulseGen_connections.jpg" width="426" height="200">
 
 ## Pulse Timing
-<img src="https://github.com/Losaccoj/PulseGen/blob/master/PulseGen_desc.jpg" width="650" height="244">
+<img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/PulseGen_desc.jpg" width="650" height="244">
 
 > - Trigger: 5V TTL trigger to initiate stimulation
 > - Delay: Time delay between trigger and stimulus. Set to 0 for immediate stimuluation with trigger
