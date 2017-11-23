@@ -1,6 +1,6 @@
 # PulseGen
 Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experiments)
-<img src="https://github.com/Losaccoj/PulseGen/blob/master/PulseGen_face.jpg" width="732" height="430">
+<img src="https://github.com/Losaccoj/PulseGen/blob/master/PulseGen_face.jpg" width="476" height="430">
 
 ## Pulse Timing
 ![Alt text](PulseGen_desc.jpg?raw=true)
