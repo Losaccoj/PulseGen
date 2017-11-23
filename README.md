@@ -11,7 +11,7 @@ Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experim
 > - Delay: Time delay between trigger and stimulus. Set to 0 for immediate stimuluation with trigger
 > - Dur: Duration/pulse width
 > - IPI: Inter-pulse interval
-> - \# of Pulses: Number of pulses in "pulse train". Set to 0 for one pulse
+> - \# of Pulses: Number of pulses in "pulse train". Set to 1 for one pulse
 
 
 ### Usage
