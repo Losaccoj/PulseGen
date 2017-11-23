@@ -25,3 +25,9 @@ Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experim
    - TTL input (trig1)
 
    In either input case, stimulus triggers are sent out over TTL1 and LED1 simultaneously according to the stimulus parameters. 
+
+#### Acknowledgments
+I would like to thank the folks behind <a href="https://sanworks.io/shop/viewproduct?productID=1102">Pulse Pal</a> for inspiration as well as the idea for the opto-isolation (TLP2530) protection of the Teensy. 
+
+The characterization of the pulse generator's performance in this paper by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4263096/">Sanders and Kepecs 2014</a> is admirable and I intend to do the same with this device as well. 
+
