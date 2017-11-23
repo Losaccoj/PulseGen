@@ -4,7 +4,7 @@ Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experim
 <img src="https://github.com/Losaccoj/PulseGen/blob/master/PulseGen_connections.jpg" width="426" height="200">
 
 ## Pulse Timing
-<img src="https://github.com/Losaccoj/PulseGen/blob/master/PulseGen_desc.jpg" width="650" height="325">
+<img src="https://github.com/Losaccoj/PulseGen/blob/master/PulseGen_desc.jpg" width="650" height="244">
 
 
 ### Usage
