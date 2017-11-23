@@ -27,7 +27,9 @@ Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experim
    In either input case, stimulus triggers are sent out over TTL1 and LED1 simultaneously according to the stimulus parameters. 
 
 #### Acknowledgments
-I would like to thank the folks behind <a href="https://sanworks.io/shop/viewproduct?productID=1102">Pulse Pal</a> for inspiration as well as the idea for the opto-isolation (TLP2530) protection of the Teensy. 
+My initial source of inspiration came from Andrew Scallon at the Optogenetics and Neural Engineering <a href="https://optogeneticsandneuralengineeringcore.github.io/ONECoreSite/">(ONE) Core</a> at the University of Colorado, Anschutz Medical Center. 
+
+I would also like to thank the folks behind <a href="https://sanworks.io/shop/viewproduct?productID=1102">Pulse Pal</a> for inspiration as to the feasibility of the project as well as the idea for the opto-isolation (TLP2530) protection of the Teensy. 
 
 The characterization of the pulse generator's performance in this paper by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4263096/">Sanders and Kepecs 2014</a> is admirable and I intend to do the same with this device as well. 
 
