@@ -16,9 +16,8 @@ Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experim
 
 ### Usage
 1. Upon boot (after splash screen (splash)), user must input stimulus parameters (user_params) on keypad following prompts. 
-   - #: Enter  
-   - A: Accept   
-   - C: Clear 
+   - #: Enter     
+   - *: Clear 
   
 2. Once stimulus parameters are established, PulseGen waits for an input before sending triggers out (stim_gen) according to the stimulus parameters. These triggers can either be:
    - Manual button-press (trig2)
