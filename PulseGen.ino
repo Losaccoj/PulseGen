@@ -50,7 +50,7 @@ void setup() {
   pinMode(LED1, OUTPUT);
   pinMode(trig1, INPUT_PULLUP);      //use pull-up resistor to set default to high
   pinMode(trig2, INPUT_PULLUP);      //use pull-up resistor to set default to high
-  
+
 
   keypad.setDebounceTime(50);        //Debounce keypad
   splash();                          //Splash (welcome) screen
@@ -69,7 +69,7 @@ void splash() {
   lcd.print("Pulse Generator");
   lcd.setCursor(0, 1);
   lcd.print("     2017");
-  delay (2000);
+  delay (1500);
   lcd.clear();
 }
 
@@ -89,50 +89,38 @@ void user_params() {
     }
     if (isDigit(whichKey)) {
       temp_input += whichKey;
+      lcd.setCursor(0, 1);
+      lcd.print("                                ");
+      lcd.setCursor(0, 1);
+      lcd.print(temp_input);
       numpos ++;
     }
     if (whichKey == '#') {          // # = Enter
-      lcd.setCursor(0, 1);
-      lcd.print(temp_input);
-      delay(2000);
+      print_user_params();         //return temp_input to array (indexed)
       lcd.clear();
       lcd.setCursor(0, 1);
-      lcd.print("Accept / Clear");
-      char confirmKey = keypad.waitForKey();
-      if (confirmKey == 'A') {      // A = Accept
-        print_user_params();         //return temp_input to array (indexed)
-        lcd.clear();
-        lcd.setCursor(0, 1);
-        lcd.print(stored + temp_input);
-        delay(2500);
+      lcd.print(stored + temp_input);
+      delay(2500);
 
-        //clear temp_input;
-        temp_input.remove(0);
-        //Clear line 2
-        lcd.setCursor(0, 1);
-        for (int i = 0; i < 16; ++i) {
-          lcd.write(' ');
-        }
-        itNo++;
-      }
-      else if (confirmKey == 'C') {   // C = Clear/erase value
-        // ask for user confirmation
-        lcd.clear();
-        lcd.setCursor(0, 1);
-        lcd.print("    Erased");
-        temp_input.remove(0);
-        delay(2000);
-        //Clear line 2
-        lcd.setCursor(0, 1);
-        for (int i = 0; i < 16; ++i) {
-          lcd.write(' ');
-        }
-      }
+      //clear temp_input;
+      temp_input.remove(0);
+      lcd.setCursor(0, 1);            //Clear line 2
+      lcd.print("                                ");
     }
+    itNo++;
   }
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print(" *** Active ***"); 
+  if (whichKey == '*') {   // * = Erase value
+    lcd.clear();
+    lcd.setCursor(0, 1);
+    lcd.print("    Erased");
+    temp_input.remove(0);
+    delay(1000);
+    lcd.setCursor(0, 1);            //Clear line 2
+    lcd.print("                                ");
+  }
+lcd.clear();
+lcd.setCursor(0, 0);
+lcd.print(" *** Active ***");
 }
 
 int print_user_params() {
@@ -143,7 +131,7 @@ void stim_gen() {
   if (in_trig1.update() || in_trig2.update()) {              //look @ trig1 to see if changed state
     if (in_trig1.fallingEdge() || in_trig2.fallingEdge()) {        //and it was a falling edge
       for (int count = 0; count < int_params[3]; count++)  {  //Create new var count to act as place-holder/counter
-      delay(int_params[0]);
+        delay(int_params[0]);
         digitalWrite(TTL1, HIGH);
         digitalWrite(LED1, HIGH);
         delay(int_params[1]);
