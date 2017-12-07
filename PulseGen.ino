@@ -16,7 +16,6 @@ char keys[ROWS][COLS] = {
 
 byte rowPins[ROWS] = {23, 22, 21, 20}; //connect to the row pinouts of the keypad
 byte colPins[COLS] = {19, 18, 17, 16}; //connect to the column pinouts of the keypad
-
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 // initialize library by pairinig LCD pin w/ Teensy pin
@@ -28,7 +27,6 @@ const int trig1 = 6; //input trigger from behavioral PC. (AKA in_trig)
 const int trig2 = 7; //button on PulseGen
 const int TTL1 = 29; //output TTL trigger to laser
 const int LED1 = 8; //output LED on PulseGen
-
 Bounce in_trig1 = Bounce(trig1, 10);     //Debounce
 Bounce in_trig2 = Bounce(trig2, 10);     //Debounce
 
@@ -50,8 +48,6 @@ void setup() {
   pinMode(LED1, OUTPUT);
   pinMode(trig1, INPUT_PULLUP);      //use pull-up resistor to set default to high
   pinMode(trig2, INPUT_PULLUP);      //use pull-up resistor to set default to high
-
-
   keypad.setDebounceTime(50);        //Debounce keypad
   splash();                          //Splash (welcome) screen
   delay(250);
@@ -77,7 +73,6 @@ void user_params() {
   while (itNo < 4) {
     lcd.setCursor(0, 0);
     lcd.print(char_params[itNo]);
-
     char whichKey = keypad.waitForKey();    //Previously char whichKey = keypad.getKey();
     if (whichKey == 'B' || whichKey == 'D' ) {   //define invalid keys
       numpos = 0;
@@ -101,7 +96,6 @@ void user_params() {
       lcd.setCursor(0, 1);
       lcd.print(stored + temp_input);
       delay(2500);
-
       //clear temp_input;
       temp_input.remove(0);
       lcd.setCursor(0, 1);            //Clear line 2
@@ -135,7 +129,6 @@ void stim_gen() {
         digitalWrite(TTL1, HIGH);
         digitalWrite(LED1, HIGH);
         delay(int_params[1]);
-
         digitalWrite(TTL1, LOW);
         digitalWrite(LED1, LOW);
         delay(int_params[2]);
