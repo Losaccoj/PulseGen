@@ -1,3 +1,7 @@
+/* PulseGen 2017
+Written by Justin Losacco
+MIT-licensed, freely available on GitHub */
+
 // include the library code:
 #include <LiquidCrystal.h>
 #include <Bounce.h>
