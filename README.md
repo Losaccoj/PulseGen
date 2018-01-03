@@ -23,7 +23,7 @@ Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experim
    - Manual button-press (trig2)
    - TTL input (trig1)
 
-   In either input case, stimulus triggers are sent out over TTL1 and LED1 simultaneously according to the stimulus parameters. 
+   In either input case, stimulus triggers are sent out over TTL1 (e.g. BNC cable) and LED1 (on face of device) simultaneously according to the stimulus parameters. 
 
 #### Acknowledgments
 My initial source of inspiration came from Andrew Scallon at the Optogenetics and Neural Engineering <a href="https://optogeneticsandneuralengineeringcore.github.io/ONECoreSite/">(ONE) Core</a> at the University of Colorado, Anschutz Medical Center. 
