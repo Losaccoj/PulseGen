@@ -40,7 +40,7 @@ int int_params[] = {' ', ' ', ' ', ' ', ' '}; //Allow for 4 entries pertaining t
 //Define stim params
 String temp_input; //Bad for ucontrollers bc fragments memory
 char tot_str;
-char stored[8] = "Stored ";    //previously String. Bad for ucontrollers bc fragments memory
+char stored[8] = "Stored ";    
 char whichKey;
 int numpos = 0;
 int itNo = 0;
