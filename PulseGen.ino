@@ -34,7 +34,7 @@ const int LED1 = 8; //output LED on PulseGen
 Bounce in_trig1 = Bounce(trig1, 10);     //Debounce
 Bounce in_trig2 = Bounce(trig2, 10);     //Debounce
 
-char* char_params[] = {"Delay (ms)", "Duration (ms)", "IPI (ms)", "# of Pulses"};
+const char* char_params[] = {"Delay (ms)", "Duration (ms)", "IPI (ms)", "# of Pulses"};
 int int_params[] = {' ', ' ', ' ', ' ', ' '}; //Allow for 4 entries pertaining to the char params strings.
 
 //Define stim params
@@ -95,34 +95,31 @@ void user_params() {
       numpos ++;
     }
     if (whichKey == '#') {          // # = Enter
-      print_user_params();         //return temp_input to array (indexed)
+      int_params[itNo] = temp_input.toInt();
       lcd.clear();
       lcd.setCursor(0, 1);
       lcd.print(stored + temp_input);
-      delay(2500);
-      //clear temp_input;
-      temp_input.remove(0);
+      delay(2500);           
+      temp_input.remove(0);         //clear temp_input since it's been transferred to int_params;
       lcd.setCursor(0, 1);            //Clear line 2
       lcd.print("                                ");
+      itNo++;
     }
-    itNo++;
+    if (whichKey == '*') {   // * = Erase value
+      lcd.clear();
+      lcd.setCursor(0, 1);
+      lcd.print("    Erased");
+      temp_input.remove(0);
+      delay(1000);
+      lcd.setCursor(0, 1);            //Clear line 2
+      lcd.print("                                ");
   }
-  if (whichKey == '*') {   // * = Erase value
-    lcd.clear();
-    lcd.setCursor(0, 1);
-    lcd.print("    Erased");
-    temp_input.remove(0);
-    delay(1000);
-    lcd.setCursor(0, 1);            //Clear line 2
-    lcd.print("                                ");
   }
+  
+
 lcd.clear();
 lcd.setCursor(0, 0);
 lcd.print(" *** Active ***");
-}
-
-int print_user_params() {
-  int_params[itNo] = temp_input.toInt();
 }
 
 void stim_gen() {
