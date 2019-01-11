@@ -7,7 +7,7 @@ Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experim
 ## Pulse Timing
 <img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/PulseGen_desc.jpg" width="650" height="244">
 
-> - Trigger: 5V TTL trigger to initiate stimulation
+> - Trigger: External 5V TTL input to initiate stimulation OR button-press on PulseGen
 > - Delay: Time delay between trigger and stimulus. Set to 0 for immediate stimuluation with trigger
 > - Dur: Duration/pulse width
 > - IPI: Inter-pulse interval
