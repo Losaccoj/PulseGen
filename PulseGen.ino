@@ -40,10 +40,8 @@ int int_params[] = {' ', ' ', ' ', ' ', ' '}; //Allow for 4 entries pertaining t
 //Define stim params
 String temp_input; //Bad for ucontrollers bc fragments memory
 char tot_str;
-char stored[8] = "Stored ";    
+const char stored[8] = "Stored ";    
 char whichKey;
-int numpos = 0;
-int itNo = 0;
 
 void setup() {
   lcd.begin(16, 2);
@@ -74,12 +72,13 @@ void splash() {
 }
 
 void user_params() {
-  while (itNo < 4) {
+  static int numpos = 0;
+  static int itNo = 0;  
+  while (itNo < 4) {                             //Iterate through each of 4 stim params
     lcd.setCursor(0, 0);
     lcd.print(char_params[itNo]);
-    char whichKey = keypad.waitForKey();    //Previously char whichKey = keypad.getKey();
+    char whichKey = keypad.waitForKey();         //Previously char whichKey = keypad.getKey();
     if (whichKey == 'B' || whichKey == 'D' ) {   //define invalid keys
-      numpos = 0;
       lcd.clear();
       lcd.setCursor(0, 0);
       lcd.print("  Invalid Key!");
@@ -115,7 +114,6 @@ void user_params() {
       lcd.print("                                ");
   }
   }
-  
 
 lcd.clear();
 lcd.setCursor(0, 0);
@@ -137,4 +135,3 @@ void stim_gen() {
     }
   }
 }
-
