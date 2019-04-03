@@ -11,15 +11,15 @@ MIT-licensed, freely available on GitHub */
 //Keypad initialization stuff
 const byte ROWS = 4; //four rows
 const byte COLS = 4; //four columns
-const char keys[ROWS][COLS] = {
+char keys[ROWS][COLS] = {
   {'1', '2', '3', 'A'},
   {'4', '5', '6', 'B'},
   {'7', '8', '9', 'C'},
   {'*', '0', '#', 'D'}
 };
 
-const byte rowPins[ROWS] = {23, 22, 21, 20}; //connect to the row pinouts of the keypad
-const byte colPins[COLS] = {19, 18, 17, 16}; //connect to the column pinouts of the keypad
+byte rowPins[ROWS] = {23, 22, 21, 20}; //connect to the row pinouts of the keypad
+byte colPins[COLS] = {19, 18, 17, 16}; //connect to the column pinouts of the keypad
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 // initialize library by pairinig LCD pin w/ Teensy pin
