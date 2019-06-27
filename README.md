@@ -2,7 +2,7 @@
 Teensy-driven pulse generator for TTL pulse trains (e.g. for optogenetic experiments).
 The enclosure STL files are in the folder entitled 'Enclosure'. There is also a bill of materials and rough wiring guide. 
 
-<img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/front.jpg" width="426" height="422"> <img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/top.jpg" width="426" height="223">
+<img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/front.jpg" width="426" height="422"> <img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/top.jpg" width="426" height="223"> <img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/wiring layout.PNG" width="699" height="683">
 
 ## Pulse Timing
 <img src="https://github.com/Losaccoj/PulseGen/blob/master/jpg/PulseGen_desc.jpg" width="650" height="244">
